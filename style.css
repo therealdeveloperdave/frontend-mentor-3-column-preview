@@ -1,0 +1,121 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-button: hsl(0, 0%, 95%);
+
+    --font-size: 15px;
+    --mobile-width: 355px;
+}
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.6em;
+}
+
+div.container {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+}
+
+div.card {
+    min-width: 320px;
+    max-width: var(--mobile-width);
+    margin: 0 auto;
+    padding: 50px;
+    height: 350px;
+}
+
+app-card:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--bright-orange);
+}
+
+app-card:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+
+app-card:nth-child(3) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--very-dark-cyan);
+}
+
+div.card h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+div.card button {
+    display: block;
+    background-color: var(--background-headings-button);
+    border: none;
+    font-family: 'Big Shoulders Display', cursive;
+    border-radius: 40px;
+    width: 140px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+div.card button:nth-child(1) {
+    color: var(--bright-orange);
+}
+
+div.card button:nth-child(2) {
+    color: var(--dark-cyan);
+}
+
+div.card button:nth-child(3) {
+    color: var(--very-dark-cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media(min-width: 1059px) { 
+    div.container {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: center;
+        
+    }
+
+    div.card {
+        margin: 0;
+    }
+
+    div.card:nth-child(1) {
+        border-radius: 10px 0 0 10px;
+    }
+    div.card:nth-child(2) {
+        border-radius: 0px;
+    }
+    div.card:nth-child(3) {
+        border-radius: 0 10px 10px 0;
+    }
+
+}
