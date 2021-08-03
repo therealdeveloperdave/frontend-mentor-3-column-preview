@@ -44,18 +44,17 @@ div.card {
     padding: 50px;
     height: 350px;
 }
-
-app-card:nth-child(1) {
+div.card:nth-child(1) {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: var(--bright-orange);
 }
 
-app-card:nth-child(2) {
+div.card:nth-child(2) {
     background-color: var(--dark-cyan);
 }
 
-app-card:nth-child(3) {
+div.card:nth-child(3) {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: var(--very-dark-cyan);
